@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      button{
+        position: absolute;
+        margin-top: 150px;
+        margin-bottom: 150px;
+      }
+    </style>
+    <script type="text/javascript">
+    var timer=null;
+    var bm;
+      function startTimer(time){
+        timer = setTimeout("movie.pause()", time);
+      }
+      function cancelTimer(){
+        if(timer != null){
+          clearTimeout(timer);
+        }
+      }
+    </script>
+  </head>
+  <body onmouseover="startTimer(3000)" onmouseout="cancelTimer()">
+    <video id="movie" src="동영상/기업홍보영상.mp4" width="500px" height="300px" autoplay controls ></video>
+  </body>
+</html>
